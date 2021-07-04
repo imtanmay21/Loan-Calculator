@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <script src="https://kit.fontawesome.com/355b458153.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+</head>
+<body>
+
+    <div class="overlay not-active">
+        <div class="card" id="error-card">
+            <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+            <i class="far fa-times-circle"></i>
+            <p>Please Check your input</p>
+        </div>
+    </div>
+    
+    <section id="main">
+
+
+        <div class="card">
+            <h1>Loan Calculator</h1>
+            <form action="#" id="input-form">
+                <div class="form-grp">
+                    <label class="label-symbol">Rs</label>
+                    <input type="number" autocomplete="off" name="loan-amount" id="loan-amount" placeholder="Loan Amount">
+                </div>
+                <div class="form-grp">
+                    <label class="label-symbol">%</label>
+                    <input type="number" autocomplete="off" name="loan-interest" id="loan-interest" placeholder="Interest">
+                </div>
+                <div class="form-grp">
+                    <input type="number" autocomplete="off" name="years" id="years" placeholder="Years To Repay">
+                </div>
+                <div class="form-grp">  
+                    <input class="form-btn" type="button" value="Calculate">
+                </div>
+            </form>
+            <div class="loader not-active">
+
+            </div>
+            <h1>Results</h1>
+            <form action="#" id="result-form">
+                <div class="form-grp">
+                    <label class="label-symbol">Monthly Payment</label>
+                    <input type="text" name="month-pay" id="month-pay" disabled>
+                </div>
+                <div class="form-grp">
+                    <label class="label-symbol">Total Payment</label>
+                    <input type="text" name="total-pay" id="total-pay" disabled>
+                </div>
+                <div class="form-grp">
+                    <label class="label-symbol">Total Interest</label>
+                    <input type="text" name="total-interest" id="total-interest" disabled>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
